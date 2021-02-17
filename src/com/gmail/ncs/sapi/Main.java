@@ -10,11 +10,7 @@ public class Main {
 
 class SumOddRange {
     public static boolean isOdd(int number) {
-        if (number > 0) {
-            return true;
-        }
-        {
-            return false;
-        }
+        // return false if the number < 0
+        return number > 0;
     }
 }
