@@ -1,15 +1,27 @@
 package com.gmail.ncs.sapi;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
         // This is an exercise to practice for loop.
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int number1 = scanner.nextInt();
+        scanner.nextLine(); // handle next line character (enter key)
+
+        System.out.println("Enter a second number");
+        int number2 = scanner.nextInt();
+
+        System.out.println(SumOddRange.sumOdd(number1, number2));
         System.out.println(SumOddRange.sumOdd(1, 100));
         System.out.println(SumOddRange.sumOdd(-5, -100));
         System.out.println(SumOddRange.sumOdd(100, 100));
         System.out.println(SumOddRange.sumOdd(13, 13));
         System.out.println(SumOddRange.sumOdd(100, -100));
         System.out.println(SumOddRange.sumOdd(100, 1000));
+        scanner.close();
     }
 }
 
